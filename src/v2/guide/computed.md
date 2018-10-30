@@ -271,7 +271,7 @@ var watchExampleVM = new Vue({
     }
   },
   created: function () {
-    this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+    this.debouncedGetAnswer = _.debounce(this.$options.method.getAnswer, 500)
   },
   methods: {
     getAnswer: function () {
